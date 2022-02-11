@@ -210,14 +210,14 @@ client.on('message', async (msg) => {
     // 如果發送訊息的地方不是語音群（可能是私人），就 return
     if (!msg.guild) return;
 
-    // !!join
+    // !join
     if (msg.content === `${prefix}join`) {
 
         // 機器人加入語音頻道
         music.join(msg);
     }
 
-    // 如果使用者輸入的內容中包含 !!play
+    // 如果使用者輸入的內容中包含 !play
     if (msg.content.indexOf(`${prefix}play`) > -1) {
 
         // 如果使用者在語音頻道中
@@ -232,35 +232,35 @@ client.on('message', async (msg) => {
         }
     }
 
-    // !!resume
+    // !resume
     if (msg.content === `${prefix}resume`) {
 
         // 恢復音樂
         music.resume(msg);
     }
 
-    // !!pause
+    // !pause
     if (msg.content === `${prefix}pause`) {
 
         // 暫停音樂
         music.pause(msg);
     }
 
-    // !!skip
+    // !skip
     if (msg.content === `${prefix}skip`) {
 
         // 跳過音樂
         music.skip(msg);
     }
 
-    // !!queue
+    // !queue
     if (msg.content === `${prefix}queue`) {
 
         // 查看隊列
         music.nowQueue(msg);
     }
 
-    // !!leave
+    // !leave
     if (msg.content === `${prefix}leave`) {
 
         // 機器人離開頻道
